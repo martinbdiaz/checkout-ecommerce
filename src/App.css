@@ -1,0 +1,204 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+
+* {
+  box-sizing: border-box;
+}
+body {
+  font-size: 0;
+  margin: 6px 2px;
+}
+h2 {
+  font-size: 18px;
+  height: 40px;
+  line-height: 40px;
+  margin: 0;
+}
+
+.detalleEnvio {
+  width: 60%;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 2%;
+  margin-left: 1%;
+  border: 2px solid #00000029;
+}
+.detalleEnvio h2 {
+  border-bottom: 1px solid black;
+  padding-left: 15px;
+}
+.detalleEnvio form {
+  width: 70%;
+  margin: 30px auto;
+}
+.detalleEnvio form div {
+  display: inline-block;
+  width: 50%;
+  margin: 5px 0;
+}
+.detalleEnvio form div * {
+  height: 24px;
+  vertical-align: top;
+  padding: 0;
+  margin: 0;
+  border: 1px solid #00000036;
+}
+.detalleEnvio form div img {
+  width: 36px;
+}
+.detalleEnvio form div input, .detalleEnvio form div select {
+  padding-left: 8px;
+  width: 77%;
+}
+.detalleEnvio form div.btn {
+  display: block;
+  width: 100%;
+  margin: 12px 0px;
+}
+.detalleEnvio form div.btn input[type="button"] {
+  background: black;
+  color: white;
+  margin-right: 20px;
+  padding: 0 20px;
+  line-height: 35px;
+  height: 35px;
+  cursor: pointer;
+  width: auto;
+}
+.detalleEnvio form div.check-facturacion {
+  font-size: 14px;
+  vertical-align: middle;
+  width: 100%;
+}
+.detalleEnvio form div.check-facturacion * {
+  line-height: 24px;
+  border: none;
+  width: auto;
+}
+
+.resumenOrden {
+  width: 35%;
+  display: inline-block;
+  vertical-align: top;
+  border: 1px solid #00000017;
+}
+.resumenOrden h2 {
+  background-color: #8080802b;
+  text-align: center;
+}
+.resumenOrden div div {
+  display: inline-block;
+  width: 33%;
+  font-size: 13px;
+  vertical-align: middle;
+}
+.resumenOrden > div.item {
+  border-bottom: 1px solid #00000017;
+  padding: 10px 0;
+}
+.resumenOrden div div img {
+  max-width: 80px;
+}
+.resumenOrden > div.btn{
+  text-align: right;
+  border-bottom: 1px solid #00000017;
+}
+.resumenOrden > div.btn input[type="button"] {
+  background-color: #d60a42;
+  color: white;
+  border: none;
+  padding: 6px 13px;
+  cursor: pointer;
+  margin: 14px;
+}
+
+.resumenOrden div.subtotal {
+  background-color: #eaeaea;
+  padding: 15px 0;
+}
+.resumenOrden div.subtotal div, .resumenOrden div.total div {
+  display: block;
+  width: 100%;
+  padding: 2px 15px;
+}
+.resumenOrden div.subtotal div > span, .resumenOrden div.total div > span {
+  display: inline-block;
+  width: 49%;
+}
+.resumenOrden div.subtotal div > span:nth-child(2), .resumenOrden div.total div > span:nth-child(2) {
+  text-align: right;
+}
+.resumenOrden div.total {
+  background-color: black;
+  color: white;
+  padding: 15px 0;
+}
+
+.cent {
+  font-size: 11px;
+}
+.precio {
+  font-weight: 600;
+  text-align: right;
+  padding-right: 6%;
+}
+.detalleEnvio form #message{
+  width: 100%;
+  font-size: 11px;
+  line-height: 13px;
+  height: 26px;
+  margin: 0 auto;
+  color: #b22616;
+  font-weight: 600;
+}
+
+
+@media (max-width:750px){
+  .detalleEnvio, .resumenOrden {
+      width: 100%;
+      margin: 0;
+      margin-bottom: 25px;
+  }
+  .detalleEnvio form {
+      width: 98%; 
+  }
+}
