@@ -17,6 +17,7 @@ export default function Resumen(){
         productos.forEach(element => acumular+=parseInt(element.price))
         setSubTotal(acumular)
         setTotal(acumular)
+        console.log(acumular)
         /*const handleSubmit = evt =>{
             evt.preventDefaul()
         }   
