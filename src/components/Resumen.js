@@ -9,22 +9,17 @@ export default function Resumen(){
     const [total,setTotal] = useState(0)
 
     useEffect(function(){
+        
         getProducts()
         .then(function(value) {        
             setProductos(value)
-        })
-        let acumular=0
-        productos.forEach(element => acumular+=parseInt(element.price))
-        setSubTotal(acumular)
-        setTotal(acumular)
-        console.log(acumular)
-        /*const handleSubmit = evt =>{
-            evt.preventDefaul()
-        }   
-        const handleChange = evt =>{
-            setCode(evt.target.value)
-            console.log(code)
-        }*/
+            let temporal=value.map(element => element.price)
+            temporal=temporal.reduce(function (previous, current) {
+                return parseInt(previous) + parseInt(current);
+            }, 0)
+            setSubTotal(temporal)
+            setTotal(temporal)
+        })       
     }, [])//sin dependencias sólo 1 vez
 
     return(
